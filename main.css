@@ -22,6 +22,7 @@ body{
 .card{
     width: 90%;
     max-width: 470px;
+    height: 90%;
     background-image: linear-gradient(135deg,#00feba , #5b548a);
     color: #fff;
     border-radius: 20px;
