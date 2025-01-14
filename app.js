@@ -34,5 +34,16 @@ async function chackWeather(cite) {
     humidty.innerHTML = data.main.humidity + "%";
     wind.innerHTML = data.wind.speed + " km/h";
     wind.witherIcon = data.weather.icon;
-    console.log(data);
+    
+    if(data.weather[0].main == "Clouds"){
+        witherIcon.src = "images/clouds.png";
+    }else if(data.weather[0].main == "Clear"){
+        witherIcon.src = "images/clear.png";
+    }else if(data.weather[0].main == "Rain"){
+        witherIcon.src = "images/rain.png";
+    }else if(data.weather[0].main == "Drizzle"){
+        witherIcon.src = "images/drizzle.png";
+    }else if(data.weather[0].main== "Mist"){
+        witherIcon.src = "images/mist.png";
+    }
 }
