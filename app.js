@@ -29,12 +29,12 @@ async function chackWeather(cite) {
     const response = await fetch(apiUrl + cite +`&appid=${apiKey}`);
     var data = await response.json();
     city.innerHTML = data.name;
-    country.innerHTML = data.sys.country;
+    country.innerHTML = `country: ${data.sys.country}`;
     temp.innerHTML = Math.round(data.main.temp - 273.15)+ "°C";
     humidty.innerHTML = data.main.humidity + "%";
     wind.innerHTML = data.wind.speed + " km/h";
     wind.witherIcon = data.weather.icon;
-    
+
     if(data.weather[0].main == "Clouds"){
         witherIcon.src = "images/clouds.png";
     }else if(data.weather[0].main == "Clear"){
